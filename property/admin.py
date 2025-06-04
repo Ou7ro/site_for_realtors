@@ -19,12 +19,12 @@ class FlatAdmin(admin.ModelAdmin):
     inlines = [OwnerInline]
 
 
-admin.site.register(Complaint)
+@admin.site.register(Complaint)
 class ComplaintAdmin(admin.ModelAdmin):
     raw_id_fields = ['user_name', 'flat']
 
 
-admin.site.register(Owner)
+@admin.site.register(Owner)
 class OwnerAdmin(admin.ModelAdmin):
     raw_id_fields = ['flats']
     
