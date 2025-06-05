@@ -18,9 +18,9 @@ def set_pure_phone(apps, schema_editor):
             else:
                 print(f'Невалидный номер: {phone_number} (ID квартиры: {flat.id})')
         except NumberParseException as e:
-                print(f'Ошибка миграции: {phone_number} (ID квартиры: {flat.id}) - {str(e)}')
+                print(f'Ошибка миграции: {phone_number} (ID квартиры: {flat.id}) - {e}')
         except Exception as e:
-            print(f'Неожиданная ошибка: {phone_number} (ID квартиры: {flat.id}) - {str(e)}')
+            print(f'Неожиданная ошибка: {phone_number} (ID квартиры: {flat.id}) - {e}')
     
 
 class Migration(migrations.Migration):
