@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 from phonenumber_field.modelfields import PhoneNumberField
 
 class Flat(models.Model):
-    new_building = models.BooleanField('Новостройка', null=True, blank=True)
+    new_building = models.BooleanField('Новостройка', null=True, blank=True, db_index=True)
     created_at = models.DateTimeField(
         'Когда создано объявление',
         default=timezone.now,
