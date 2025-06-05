@@ -64,13 +64,15 @@ class Complaint(models.Model):
         User,
         on_delete=models.CASCADE,
         null=True,
-        verbose_name='Кто жаловался'
+        verbose_name='Кто жаловался',
+        related_name='complaints'
     )
     flat = models.ForeignKey(
         Flat,
         on_delete=models.CASCADE,
         null=True,
-        verbose_name='Квартира на которую пожаловались'
+        verbose_name='Квартира на которую пожаловались',
+        related_name='complaints'
     )
     complaints_text = models.TextField('Текст жалобы', null=True)
 
